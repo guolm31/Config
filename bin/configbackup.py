@@ -307,12 +307,12 @@ class GetNetworkConfig:
 if __name__ == "__main__":
     mylogger = logger.Logger()
     # logging.debug('this is a debug from Logger.py')
-    s=GetNetworkConfig()
-    s.huawei_telnet_getconfig("telnet 10.222.5.1", "ywpt", "HBLTcisco*()", "huawei_telnet_10.222.5.1.log")
-    s.huawei_ssh_getconfig("ssh ywpt@10.222.0.235","HBLTcisco*()","huawei_ssh_10.222.0.235.log")
-    s.cisco_telnet_getconfig("telnet 10.222.0.206","ywpt","HBLTcisco*()","cisco_telnet_result.log")
-    s.dp_ssh_getconfig("ssh ywpt@10.222.0.244","HBLTcisco*()","dp_ssh_10.222.0.244.log")
-    s.juniper_ssh_getconfig("ssh ywpt@10.222.0.240","HBLTcisco*()","dp_ssh_10.222.0.240.log")
+    s = GetNetworkConfig()
+    s.huawei_telnet_getconfig("telnet 10.222.5.1", "ywpt", "HBLTcisco*()", "config_huawei_telnet_10.222.5.1.log")
+    s.huawei_ssh_getconfig("ssh ywpt@10.222.0.235","HBLTcisco*()","config_huawei_ssh_10.222.0.235.log")
+    s.cisco_telnet_getconfig("telnet 10.222.0.206","ywpt","HBLTcisco*()","config_cisco_telnet_10.222.0.206.log")
+    s.dp_ssh_getconfig("ssh ywpt@10.222.0.244","HBLTcisco*()","config_dp_ssh_10.222.0.244.log")
+    s.juniper_ssh_getconfig("ssh ywpt@10.222.0.240","HBLTcisco*()","config_juniper_ssh_10.222.0.240.log")
 
 ''' index = p.expect(['good', 'bad', pexpect.EOF, pexpect.TIMEOUT])
     if index == 0:
